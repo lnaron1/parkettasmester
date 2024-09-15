@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* navbar */
+
+.horizontal {
+    list-style-type: none;
+    background-color: rgba;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.horizontal li:last-child {
+    float: left;
+}
+
+.horizontal li {
+    float: right;
+}
+
+.navbtn, .logo {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbtn:hover {
+    background-color: rgba(191, 191, 191, 0.315);
+    cursor: pointer;
+}
+
+.sidebar {
+    list-style-type: none;
+    backdrop-filter: blur(10px);
+    padding: 0px;
+    margin: 0px;
+    width: 0px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.sidebar.active {
+    width: 300px;
+}
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: left;
+}
+
+.sidebar a:hover {
+    background-color: rgba(191, 191, 191, 0.315);
+    backdrop-filter: blur(10px);
+}
+
+.collapse {
+    height: 49px;
+    width: 49px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../svg/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24\ \(1\).svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+}
+
+.collapse:hover {
+    background-color: rgba(191, 191, 191, 0.315);
+}
+
+.closebutton {
+    height: 49px;
+    width: 49px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../svg/close_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35px;
+}
+
+.closebutton:hover {
+    background-color: rgba(191, 191, 191, 0.315);
+}
+
+/* navbar responsiveness */
+
+@media (min-width:850px) {
+    .collapse {
+        display: none;
+    }
+}
+
+@media (max-width:849px) {
+    .navbtn {
+        display: none;
+    }
+}
+
+@media (max-width:350px) {
+    .sidebar.active {
+        width: 100vw;
+    }
+}
